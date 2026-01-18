@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Outlet</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<style>
+body {
+  margin: 0;            
+  padding: 0;
+  background-color: #660000;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.branch-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.branch-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+}
+
+.branch-card h3 {
+  color: #660000;
+}
+
+.branch-card p {
+  font-size: 20px;
+  color: #555;
+}
+
+.branch-card button {
+  background-color: #990000;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.branch-card button:hover {
+  background-color: #ff1a1a;
+}
+
+</style>
+
+<body>
+
+<section class="header">
+		<div class="nav">		
+		 <div class="logo"><h1 style="font-family: Zcool Kuaile, sans-serif;">Gepukholic</h1></div>
+		 <ul>
+			<li><a href="index.html" target="_blank">Home</a></li>
+			<li><a href="about_us.html" target="_blank">About Us</a></li>
+			<li><a href="menu.html" target="_blank">Menu</a></li>
+			<li><a href="outlet.html" target="_blank">Outlet</a></li>
+			<li><a href="contact_us.html" target="_blank">Contact Us</a></li>
+		</ul>
+		</div>
+	</section>
+
+<section class="contact">
+	<div class="content">
+		<h2 style="font-family: Zcool Kuaile, sans-serif;">Our Outlets</h2>
+		<p>Find Your Perfect Spot</p>
+	</div>
+
+<div class="branch-container">
+
+  <div class="branch-card">
+    <h3>Machang</h3>
+    <p>Kelantan</p>
+    <button onclick="openMap('Machang Kelantan')">View Map</button>
+</div>
+
+	<div class="branch-card">
+	    <h3>Kota Bharu</h3>
+	    <p>Kelantan</p>
+	    <button onclick="openMap('Kota Bharu Kelantan')">View Map</button>
+	</div>
+
+	<div class="branch-card">
+	    <h3>Kuala Terengganu</h3>
+	    <p>Terengganu</p>
+	    <button onclick="openMap('Kuala Terengganu Terengganu')">View Map</button>
+	</div>
+
+	<div class="branch-card">
+	    <h3>Selangor</h3>
+	    <p>Shah Alam</p>
+	    <button onclick="openMap('Shah Alam Selangor')">View Map</button>
+	</div>
+
+	<div class="branch-card">
+	    <h3>Penang</h3>
+	    <p>George Town</p>
+	    <button onclick="openMap('George Town Penang')">View Map</button>
+	</div>
+
+	<div class="branch-card">
+	    <h3>Melaka</h3>
+	    <p>Bandar Hilir</p>
+	    <button onclick="openMap('Bandar Hilir Melaka')">View Map</button>
+	</div>
+
+	<div class="branch-card">
+	    <h3>Pahang</h3>
+	    <p>Kuantan</p>
+	    <button onclick="openMap('Kuantan Pahang')">View Map</button>
+	</div>
+
+	<div class="branch-card">
+	    <h3>Kedah</h3>
+	    <p>Alor Setar</p>
+	    <button onclick="openMap('Alor Setar Kedah')">View Map</button>
+	</div>
+
+</div>
+
+<script>
+function openMap(place) {
+  let url = "https://www.google.com/maps?q=" + encodeURIComponent(place);
+  window.open(url, "_blank");
+}
+</script>
+
+<footer> 
+    <div class="footer-content"> 
+        <img src="photos/gepukholic.png" alt="Gepukholic"> 
+
+        <div class="footer-text"> 
+            <p>© 2026 Gepuk Holic. All rights reserved.</p> 
+
+        </div> 
+        <p> This website and its content are managed by Gepuk Holic. We strive to keep all information accurate and up to date. Certain technologies such as cookies may be used to improve user experience and enhance our services. 
+        </p> 
+
+        <p class="footer-credit"> 
+        This Outlets page were developed by Nur Nilam Sarie
+        </p> 
+   			</div> 
+</div> 
+</footer>
+
+</body>
+</html>

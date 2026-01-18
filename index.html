@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gepuk Holic Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link rel="help" href="https://www.w3schools.com/css/css3_buttons.asp" title="CSS Buttons Reference">
+    <link rel="help" href="https://www.w3schools.com/howto/howto_js_slideshow.asp" title="Manual Slideshow Reference">
+    <link rel="help" href="https://www.w3schools.com/howto/howto_css_modals.asp" title="Modal / Alert Box Reference">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<style>
+        body
+        {
+            background-image: url('image/spicy.jpg');
+        }
+    </style>
+
+<body>
+
+
+	<nav class="navbar">
+    <div class="logo"><h1 style="font-family: Zcool Kuaile, sans-serif;">Gepukholic</h1></div>
+    <ul>
+        <li><a href="index.html" target="_blank">Home</a></li>
+        <li><a href="about_us.html" target="_blank">About Us</a></li>
+        <li><a href="menu.html" target="_blank">Menu</a></li>
+        <li><a href="outlet.html" target="_blank">Outlet</a></li>
+        <li><a href="contact_us.html" target="_blank">Contact Us</a></li>
+    </ul>
+</nav>
+
+<div id="posterModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <a href="menu.html">
+      <img src="image/alert.png" alt="Check our Menu" class="poster-img">
+    </a>
+  </div>
+</div>
+
+<script>
+let modal = document.getElementById("posterModal");
+let closeBtn = document.getElementsByClassName("close")[0];
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h2>So Spicy, <span>So Hot!</span>, Served with a <span>Smile!</span></h2>
+        <p>
+            Welcome to <strong>Gepuk Holic</strong> — home of authentic Ayam Gepuk. Our chicken is freshly marinated, smashed to perfection, and paired with fiery sambal that keeps you coming back for more. Join us for affordable student-priced <span>Ayam Gepuk</span> experience near your university!
+        </p>
+    </div>
+
+    <div class="hero-img">
+        <img src="image/suasana_kedai.png" alt="Gepuk Holic Stall">
+    </div>
+</section>
+
+<section class="menu" id="menu">
+    <h2>Explore Our Delicious Menu</h2>
+
+    <div class="menu-items">
+        <div class="menu-card">
+            <img src="image/Nasi_Ayam_Bumbu.png" alt="Ayam Gepuk">
+            <h3>Ayam Gepuk Bumbu</h3>
+            <p>RM10.00</p>
+            <p>Rice, chicken, cabbage & cucumber</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="image/Nasi_Ayam_Kicap.png" alt="Ayam Gepuk">
+            <h3>Ayam Gepuk Kicap</h3>
+            <p>RM.1000</p>
+            <p>Rice, chicken cooked in soy sauce, cabbage & cucumber</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="image/Nasi_Ayam_Crispy.png" alt="Ayam Gepuk">
+            <h3>Ayam Gepuk Crispy</h3>
+            <p>RM11.00</p>
+            <p>Rice, crispy chicken, cabbage & cucumber</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="image/gtea.jpg" alt="Green Tea">
+            <h3>Green Tea</h3>
+            <p>RM3.00</p>
+        </div>
+    </div>
+
+    </div>
+
+    <div style="margin-top:40px;">
+        <a href="menu.html" class="order-here"
+           style="background:#ff1a1a;padding:15px 40px;border-radius:30px;color:white;font-weight:bold;text-decoration:none;">
+            View More Menu
+        </a>
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+    <img src="image/interior.jpg" alt="Interior Stall">
+
+    <div class="about-text">
+        <h2 style="font-family: Zcool Kuaile, sans-serif;">Why Gepuk Holic?</h2>
+        <p>
+            Inspired by traditional Indonesian flavours, Gepuk Holic brings
+            bold sambal, crispy chicken, and affordable meals for everyone.
+            Enjoy free rice & sambal refills for dine-in customers!
+        </p>
+    </div>
+</section>
+
+
+<section class="testimonial">
+
+            <div class="testimonial-card mySlides">
+                <p>
+                    “The sambal is crazy good! Super spicy but addictive. Definitely my favourite ayam gepuk near campus.”
+                </p>
+                <h4>— Nilam Sarie</h4>
+            </div>
+
+            <div class="testimonial-card mySlides">
+                <p>
+                    “Authentic taste and friendly staff.
+                    The crispy ayam gepuk is a must-try.”
+                </p>
+                <h4>— Nabil Muqrish</h4>
+            </div>
+
+            <div class="testimonial-card mySlides">
+                <p>
+                    “Affordable price, big portion, and free refill.
+                    Perfect for students who love spicy food!”
+                </p>
+                <h4>— Tuan Alyssa Sabrina</h4>
+            </div>
+
+            <div class="testimonial-buttons">
+                <button onclick="plusSlides(-1)">&#10094; Prev</button>
+                <button onclick="plusSlides(1)">Next &#10095;</button>
+            </div>
+
+</section>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+</script>
+
+
+<footer> 
+    <div class="footer-content"> 
+        <img src="image/gepukholic bg.png" alt="Gepukholic"> 
+
+        <div class="footer-text"> 
+            <p>© 2026 Gepuk Holic. All rights reserved.</p> 
+
+        </div> 
+        <p> This website and its content are managed by Gepuk Holic. We strive to keep all information accurate and up to date. Certain technologies such as cookies may be used to improve user experience and enhance our services. 
+        </p> 
+
+        <p class="footer-credit"> 
+        This Contact Us page was developed by Nur Qatreena
+        </p> 
+    </div> 
+</div> 
+</footer>
+
+
+</body>
+</html>
